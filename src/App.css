@@ -1,33 +1,68 @@
-.App {
+.App {  
+  margin: 20px;
+}
+.square{
+  font-size: 12px;
+  width: 24px;
+  height: 24px;
+  overflow: auto;  
+  vertical-align: top;
+}
+.game-info{  
+  flex: 1; 
+  width: 100%;  
+}
+.board-row{
+  font-size: 0;
+}
+.game-board{
+  flex-wrap: wrap;
+  width: 100%;
+  flex: 2;
+  display: flex;  
+}
+.board{
+  flex: 2;
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.player{
+  flex: 1;
+  text-align: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.game{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.data{
+  text-align: center;  
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 906px){
+  .game{
+    display: flex;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .data{
+    text-align: center;
+    margin-top: 2rem;
   }
+} 
+@media only screen and (max-width: 667px){
+  .game-board{
+    width: 100%;
+    flex: 2;
+    display: flex;
+    flex-direction: column;  
+  }
+  .board{
+    flex: 2;
+    text-align: center;
+    order: 2;
+  }
+  .player{
+    flex: 1;
+    text-align: center;
+    order: 1;
+  }
+}
+.btn-move{
+  width: 12rem;
 }
